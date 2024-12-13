@@ -1,0 +1,183 @@
+/* GLOBAL STYLES */
+
+:root {
+  --text-color: #e9e7e7;
+  --title-color: #e6ecf0;
+  --body-bg-color: #1b1b1b;
+  --accent-color: #6cc5f8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  font-family: system-ui;
+  letter-spacing: 0.02em;
+  color: var(--text-color);
+  background-color: var(--body-bg-color);
+}
+
+p {
+  text-wrap: pretty;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+h1,
+h2 {
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus {
+  outline-offset: 0.3rem;
+}
+
+/* HEADER */
+
+.header {
+  padding: 4rem 1rem 3rem;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--title-color);
+  line-height: 110%;
+}
+
+.subtitle {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--title-color);
+  opacity: 0.85;
+  line-height: 150%;
+}
+
+/* MAIN */
+
+.main {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.areas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.area {
+  border-radius: 1rem;
+  padding: 2.5rem 1.25rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+.area:hover {
+  filter: opacity(80%);
+}
+
+.area.one {
+  border: 2px solid var(--accent-color);
+  background-color: #182631;
+  color: var(--accent-color);
+}
+
+.area.two {
+  border: 2px solid #76e0a7;
+  background-color: #053321;
+  color: #76e0a7;
+}
+
+.area.three {
+  border: 2px solid #c1a1d5;
+  background-color: #2b1831;
+  color: #c1a1d5;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 4rem 1rem;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.footer .icons {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.footer a {
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+}
+
+.footer a:hover {
+  color: var(--accent-color);
+}
+
+.github-icon,
+.linkedin-icon,
+.website-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 576px) {
+
+  .header {
+    padding: 4rem 1rem 2.75rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .areas {
+    grid-template-columns: 1fr;
+  }
+
+  .area:hover {
+    filter: opacity(100%);
+  }
+
+  .footer {
+    padding: 2.75rem 1rem;
+  }
+
+  .footer a:hover {
+    color: var(--text-color);
+  }
+}

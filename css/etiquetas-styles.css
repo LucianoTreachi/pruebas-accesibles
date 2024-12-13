@@ -1,0 +1,324 @@
+/* GLOBAL STYLES */
+
+:root {
+  --text-color: #e9e7e7;
+  --title-color: #e6ecf0;
+
+  --body-bg-color: #1b1b1b;
+
+  --button-text-color: #ffffff;
+  --primary-button-bg-color: #094ab4;
+
+  --accent-color: #6cc5f8;
+  --warning-color: #f8d76c;
+  --success-color: #76e0a7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  font-family: system-ui;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  color: var(--text-color);
+  background-color: var(--body-bg-color);
+}
+
+input,
+textarea,
+select,
+button {
+  color: inherit;
+  font: inherit;
+  border-radius: 0.5rem;
+}
+
+input {
+  background-color: transparent;
+  border: 2px solid #b1b3b7;
+  padding: 1rem 0.8rem;
+}
+
+button {
+  border: none;
+  color: var(--button-text-color);
+  background-color: var(--primary-button-bg-color);
+  padding: 1rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.75;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+a:focus,
+button:focus,
+input:focus,
+summary:focus {
+  outline-offset: 0.3rem;
+}
+
+p {
+  text-wrap: pretty;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  line-height: 1.4;
+}
+
+img,
+video,
+svg,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+article {
+  background-color: #23272f;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  margin-bottom: 4rem;
+}
+
+article:last-child {
+  margin-bottom: 0;
+}
+
+label {
+  display: block;
+  opacity: .85;
+  margin-bottom: 1rem;
+}
+
+q:before {
+  content: '"';
+}
+
+q::after {
+  content: '"';
+}
+
+blockquote {
+  text-wrap: pretty;
+  line-height: 1.6;
+  opacity: .85;
+}
+
+b {
+  font-weight: 700;
+}
+
+/* HEADER */
+
+.header {
+  padding: 4rem 1rem;
+  max-width: 45rem;
+  margin: 0 auto;
+}
+
+.page-back-btn {
+  display: inline-block;
+  border-radius: 1rem;
+  border: 2px solid var(--accent-color);
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 3rem;
+  transition: opacity .3s;
+  background-color: #094ab4;
+}
+
+.page-back-btn:hover {
+  opacity: 0.85;
+}
+
+.page-back-btn svg {
+  width: 1.625rem;
+  height: 1.625rem;
+  fill: #fff;
+  vertical-align: middle;
+  transition: transform .4s;
+}
+
+.page-back-btn:hover svg {
+  transform: translateX(-0.4rem);
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--title-color);
+  line-height: 110%;
+}
+
+/* MAIN */
+
+.main {
+  max-width: 45rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.warning-paragraph {
+  margin-bottom: 4rem;
+}
+
+.warning-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  fill: var(--warning-color);
+  vertical-align: middle;
+  transform: translateY(-0.1rem);
+}
+
+.article-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--title-color);
+}
+
+.primary-paragraph {
+  font-weight: 600;
+  opacity: 0.8;
+  padding: 1rem;
+  border-left: 3px solid var(--accent-color);
+  background-color: #182631;
+  border-radius: 0 1rem 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.secondary-paragraph {
+  margin-bottom: 2rem;
+}
+
+.screen-readers-info-container {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.8rem;
+}
+
+/* dialog */
+.dialog-modal {
+  border: none;
+  border-radius: 1rem;
+  padding: 2rem;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  max-width: 80%;
+  animation: fadeIn .4s linear;
+}
+
+.dialog-modal h2 {
+  margin-bottom: 1rem;
+}
+
+.dialog-modal button {
+  width: 100%;
+}
+
+.dialog-modal::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+}
+
+.dialog-modal[open]::backdrop {
+  animation: fadeIn .3s forwards;
+}
+
+/* details */
+.summary {
+  font-weight: 600;
+  color: var(--success-color);
+  line-height: 1.6;
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+.answer {
+  padding: 1rem;
+}
+
+/* fieldset + legend */
+.fieldset {
+  border: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.legend {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 1.6rem;
+}
+
+/* FOOTER */
+
+.footer {
+  max-width: 45rem;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 576px) {
+
+  button,
+  input {
+    width: 100%;
+  }
+
+  button:hover,
+  a:hover {
+    opacity: 1;
+  }
+
+  .header {
+    padding: 4rem 1rem;
+  }
+
+  .footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer p {
+    font-size: 1rem;
+  }
+}

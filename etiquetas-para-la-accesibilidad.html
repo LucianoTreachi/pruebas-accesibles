@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Basic -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etiquetas HTML para mejorar la accesibilidad web</title>
+  <meta name="description"
+    content="Conoce las etiquetas HTML más importantes para optimizar la accesibilidad web y garantizar una experiencia inclusiva para todos.">
+  <link rel="canonical" href="https://pruebasaccesibles.vercel.app/etiquetas-para-la-accesibilidad">
+  <!-- Styles -->
+  <link rel="preload" as="style" href="/css/etiquetas-styles.css">
+  <link rel="stylesheet" href="/css/etiquetas-styles.css">
+  <!-- Scripts -->
+  <script src="/js/etiquetas-script.js" defer></script>
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon/favicon.png" type="image/png">
+  <!-- Facebook -->
+  <meta property="og:url" content="https://pruebasaccesibles.vercel.app/etiquetas-para-la-accesibilidad">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Etiquetas HTML para mejorar la accesibilidad web">
+  <meta property="og:description"
+    content="Conoce las etiquetas HTML más importantes para optimizar la accesibilidad web y garantizar una experiencia inclusiva para todos.">
+  <meta property="og:image" content="https://i.postimg.cc/yx46Cd7k/banner.jpg">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://pruebasaccesibles.vercel.app/etiquetas-para-la-accesibilidad">
+  <meta name="twitter:title" content="Etiquetas HTML para mejorar la accesibilidad web">
+  <meta name="twitter:description"
+    content="Conoce las etiquetas HTML más importantes para optimizar la accesibilidad web y garantizar una experiencia inclusiva para todos.">
+  <meta name="twitter:image" content="https://i.postimg.cc/yx46Cd7k/banner.jpg">
+</head>
+
+<body>
+  <header class="header">
+    <a href="javascript:window.history.back()" class="page-back-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z">
+        </path>
+      </svg>
+      Volver
+    </a>
+    <h1 class="title">Etiquetas HTML para Mejorar la Accesibilidad Web</h1>
+  </header>
+
+  <main class="main">
+
+    <p class="secondary-paragraph">
+      Algunas etiquetas HTML son esenciales para mejorar la accesibilidad web, especialmente para usuarios de lectores
+      de pantalla. En esta sección, realizaremos pruebas para demostrar cómo estas etiquetas pueden optimizar la
+      experiencia de navegación.
+    </p>
+
+    <p class="warning-paragraph">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="warning-icon" aria-hidden="true">
+        <path
+          d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 15H13V17H11V15ZM11 7H13V13H11V7Z">
+        </path>
+      </svg>
+      <b style="color: #f8d76c;">Atención:</b> Para realizar las pruebas, asegúrate de tener un lector de pantalla
+      activo, como NVDA, Narrador de Windows, Screen Reader, TalkBack o VoiceOver.
+    </p>
+
+    <!-- label -->
+    <article>
+      <h2 class="article-title"><code>&lt;label&gt;</code></h2>
+
+      <p class="primary-paragraph">
+        La etiqueta <code>&lt;label&gt;</code> se utiliza junto a elementos de formulario como
+        <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code> o <code>&lt;select&gt;</code> para proporcionar una
+        descripción útil. Esta descripción es visible en la interfaz y también es anunciada por los lectores de pantalla
+        cuando el usuario se posiciona en el campo correspondiente.
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, prueba posicionarte en el campo o hacer foco con la tecla 'Tab' y escucha cómo
+        los diferentes lectores de pantalla anuncian el contenido:
+      </p>
+
+      <label for="input1">Nombre</label>
+      <input type="text" id="input1">
+
+      <div class="screen-readers-info-container">
+        <p>
+          <b>💬 NVDA</b>: Anuncia el valor de label + <q>Edición en blanco</q>.
+        </p>
+        <p>
+          <b>💬 Narrador de Windows</b>: Anuncia el valor de label + <q>Editar</q>.
+        </p>
+        <p>
+          <b>💬 Screen Reader</b>: Anuncia El valor de label + <q>Edita texto</q>.
+        </p>
+        <p>
+          <b>💬 TalkBack</b>: Anuncia <q>Editar casilla</q> + El valor de label.
+        </p>
+      </div>
+    </article>
+
+    <!-- dialog -->
+    <article>
+      <h2 class="article-title"><code>&lt;dialog&gt;</code></h2>
+
+      <p class="primary-paragraph">
+        La etiqueta <code>&lt;dialog&gt;</code> representa una caja de diálogo o modal. El comportamiento
+        por defecto de esta etiqueta en cuanto a la accesibilidad es el siguiente: al abrirse el modal, el primer
+        elemento interactivo recibe el foco automáticamente. Además, el modal se puede cerrar con la tecla 'Escape'.
+        Cuando el modal se cierra, el foco regresa automáticamente al elemento que lo abrió.
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, presiona el botón y escucha cómo los diferentes lectores de pantalla anuncian el
+        contenido:
+      </p>
+
+      <button id="open-dialog-button">Mostrar diálogo</button>
+
+      <dialog id="dialog-modal" class="dialog-modal">
+        <h2>Ventana modal</h2>
+        <button id="close-dialog-button">Cerrar</button>
+      </dialog>
+
+      <div class="screen-readers-info-container">
+        <p>
+          <b>💬 NVDA</b>: Anuncia <q>Diálogo</q> y hace foco en el primer elemento interactivo del modal.
+        </p>
+        <p>
+          <b>💬 Narrador de Windows</b>: Hace foco en el primer elemento interactivo y luego anuncia el título del
+          modal.
+        </p>
+        <p>
+          <b>💬 Screen Reader</b>: Hace foco en el primer elemento interactivo del modal.
+        </p>
+        <p>
+          <b>💬 TalkBack</b>: Hace foco en el primer elemento interactivo del modal y luego anuncia <q>Se abrió el
+            diálogo</q>.
+        </p>
+      </div>
+    </article>
+
+    <!-- details + summary-->
+    <article>
+      <h2 class="article-title"><code>&lt;details&gt;</code> + <code>&lt;summary&gt;</code></h2>
+
+      <p class="primary-paragraph">
+        La etiqueta <code>&lt;details&gt;</code> nos proporciona la posibilidad de crear un elemento desplegable
+      </p>
+      <p class="primary-paragraph">
+        La etiqueta <code>&lt;summary&gt;</code> es el título del elemento desplegable. Aparece siempre, se encuentre
+        desplegado o no.
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, toca el elemento desplegable, o haz foco con 'Tab' y escucha cómo los
+        diferentes lectores de pantalla anuncian el contenido:
+      </p>
+
+      <details class="details">
+        <summary class="summary" tabindex="0">
+          ¿Por qué es importante la etiqueta details para la accesibilidad?
+        </summary>
+        <p class="answer">
+          Es importante para la accesibilidad web porque permite a los usuarios, incluidos los que utilizan lectores
+          de pantalla, acceder y entender secciones de contenido expandible de forma controlada.
+        </p>
+      </details>
+
+      <div class="screen-readers-info-container">
+        <p>
+          <b>💬 NVDA</b>: Anuncia el contenido de la etiqueta &lt;summary&gt; + <q>Botón
+            contraído</q>.
+        </p>
+        <p>
+          <b>💬 Narrador de Windows</b>: Anuncia el contenido de la etiqueta &lt;summary&gt; +
+          <q>Botón contraído</q>.
+        </p>
+        <p>
+          <b>💬 Screen Reader</b>: Anuncia solo el contenido de la etiqueta &lt;summary&gt;.
+        </p>
+        <p>
+          <b>💬 TalkBack</b>: Anuncia <q>Contraída</q> + el contenido de la etiqueta &lt;summary&gt;.
+        </p>
+      </div>
+    </article>
+
+    <!-- fieldset + legend -->
+    <article>
+      <h2 class="article-title"><code>&lt;fieldset&gt;</code> + <code>&lt;legend&gt;</code></h2>
+
+      <p class="primary-paragraph">
+        La etiqueta <code>&lt;fieldset&gt;</code> se utiliza para agrupar campos relacionados dentro de un
+        formulario.
+      </p>
+      <p class="primary-paragraph">
+        La etiqueta <code>&lt;legend&gt;</code> se utiliza para proporcionar un título descriptivo a los
+        campos agrupados en un fieldset.
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, prueba posicionarte en algún campo o hacer foco con 'Tab' y escucha cómo los
+        diferentes lectores de pantalla anuncian el contenido:
+      </p>
+
+      <form id="contact-form">
+        <fieldset class="fieldset">
+          <legend class="legend">Información de contacto</legend>
+
+          <div>
+            <label for="fullName">Nombre completo</label>
+            <input type="text" id="fullName" name="fullName">
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+          </div>
+
+          <div>
+            <button type="submit" id="submit-button">Enviar</button>
+          </div>
+        </fieldset>
+      </form>
+
+      <div class="screen-readers-info-container">
+        <p>
+          <b>💬 NVDA</b>: Anuncia el título de &lt;legend&gt; + <q>agrupación</q> + el valor de
+          &lt;label&gt;
+        </p>
+        <p>
+          <b>💬 Narrador de Windows</b>: Anuncia solo el contenido de &lt;label&gt; + <q>Editar</q>.
+          <br>
+        </p>
+        <p>
+          <b>💬 Screen Reader</b>: Anuncia solo el contenido de &lt;label&gt; + <q>Edita texto</q>.
+        </p>
+        <p>
+          <b>💬 TalkBack</b>: Anuncia solo el contenido de &lt;label&gt; + <q>Editar casilla</q>.
+        </p>
+      </div>
+    </article>
+
+    <!-- q y blockquote -->
+    <article>
+      <h2 class="article-title"><code>&lt;q&gt;</code> y <code>&lt;blockquote&gt;</code></h2>
+
+      <p class="secondary-paragraph">
+        Las etiquetas <code>&lt;q&gt;</code> y <code>&lt;blockquote&gt;</code> proporcionan contexto semántico a las
+        citas. Esto permite que los lectores de pantalla y otras tecnologías de asistencia identifiquen y anuncien
+        correctamente el texto citado.
+      </p>
+
+      <p class="primary-paragraph">
+        La etiqueta <code>&lt;q&gt;</code> está pensada para citas breves que forman parte del flujo de
+        un párrafo, y suele aplicarse dentro de una oración o al final de una frase. Esta etiqueta agrega
+        automáticamente comillas alrededor del texto en muchos navegadores, indicando que es una cita breve sin
+        interrumpir el flujo del texto. Las comillas se pueden estilizar con CSS.
+      </p>
+
+      <p class="secondary-paragraph">
+        Ejemplo:
+      </p>
+
+      <p class="secondary-paragraph">
+        Como dice el refrán, <q>el que no arriesga, no gana</q>, una lección que siempre aplicamos en nuestro equipo
+        de desarrollo.
+      </p>
+
+      <p class="primary-paragraph">
+        La etiqueta <code>&lt;blockquote&gt;</code> se utiliza para citas más largas o para aquellas que
+        se desean destacar visualmente en un bloque separado. Esta etiqueta por sí sola no añade comillas alrededor
+        del contenido por lo que se deben introducir manualmente.
+      </p>
+
+      <p class="secondary-paragraph">
+        Ejemplo:
+      </p>
+
+      <blockquote>
+        "El éxito no es el final, el fracaso no es fatal: lo que cuenta es el valor para continuar".
+      </blockquote>
+    </article>
+
+  </main>
+
+  <footer class="footer">
+    <p>Desarrollado por Luciano Treachi</p>
+  </footer>
+</body>
+
+</html>

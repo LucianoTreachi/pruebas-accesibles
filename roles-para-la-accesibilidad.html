@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Basic -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roles HTML para mejorar la accesibilidad web</title>
+  <meta name="description"
+    content="Conoce los roles HTML más importantes para optimizar la accesibilidad web y garantizar una experiencia inclusiva para todos.">
+  <link rel="canonical" href="https://pruebasaccesibles.vercel.app/roles-para-la-accesibilidad">
+  <!-- Styles -->
+  <link rel="preload" as="style" href="/css/roles-styles.css">
+  <link rel="stylesheet" href="/css/roles-styles.css">
+  <!-- Scripts -->
+  <script src="/js/roles-script.js" defer></script>
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon/favicon.png" type="image/png">
+  <!-- Facebook -->
+  <meta property="og:url" content="https://pruebasaccesibles.vercel.app/roles-para-la-accesibilidad">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Roles HTML para mejorar la accesibilidad web">
+  <meta property="og:description"
+    content="Conoce los roles HTML más importantes para optimizar la accesibilidad web y garantizar una experiencia inclusiva para todos.">
+  <meta property="og:image" content="https://i.postimg.cc/yx46Cd7k/banner.jpg">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://pruebasaccesibles.vercel.app/roles-para-la-accesibilidad">
+  <meta name="twitter:title" content="Roles HTML para mejorar la accesibilidad web">
+  <meta name="twitter:description"
+    content="Conoce los roles HTML más importantes para optimizar la accesibilidad web y garantizar una experiencia inclusiva para todos.">
+  <meta name="twitter:image" content="https://i.postimg.cc/yx46Cd7k/banner.jpg">
+</head>
+
+<body>
+  <header class="header">
+    <a href="javascript:window.history.back()" class="page-back-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z">
+        </path>
+      </svg>
+      Volver
+    </a>
+    <h1 class="title">Roles HTML para Mejorar la Accesibilidad Web</h1>
+  </header>
+
+  <main class="main">
+
+    <p class="secondary-paragraph">
+      Algunos roles HTML son esenciales para mejorar la accesibilidad web, especialmente para usuarios de lectores
+      de pantalla. En esta sección, realizaremos pruebas para demostrar cómo estos roles pueden optimizar la
+      experiencia de navegación.
+    </p>
+
+    <p class="warning-paragraph">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="warning-icon" aria-hidden="true">
+        <path
+          d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 15H13V17H11V15ZM11 7H13V13H11V7Z">
+        </path>
+      </svg>
+      <b style="color: #f8d76c;">Atención:</b> Para realizar las pruebas, asegúrate de tener un lector de pantalla
+      activo, como NVDA, Narrador de Windows, Screen Reader, TalkBack o VoiceOver.
+    </p>
+
+    <!-- role presentation / role none -->
+    <article>
+      <h2 class="article-title"><code>role presentation</code> y <code>role none</code></h2>
+
+      <p class="primary-paragraph">
+        Ambos roles tienen el mismo propósito: hacer que un elemento sea ignorado por el lector de pantalla. ¿Cuándo
+        utilizar estos roles? En SVG decorativos.
+      </p>
+      <p class="primary-paragraph">
+        Mientras que <code>role='presentation'</code> es el más antiguo y ampliamente soportado,
+        <code>role='none'</code> es más moderno y explícito, pero tiene el mismo efecto. En la práctica, podemos usar
+        cualquiera.
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, el siguiente SVG es decorativo, por lo tanto se usará role='none' y el lector de pantalla no
+        lo anunciará.
+      </p>
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="decorative-icon" role="none">
+        <path
+          d="M4.87759 3.00275H19.1319C19.4518 3.00275 19.7524 3.15583 19.9406 3.41457L23.7634 8.67097C23.9037 8.86385 23.8882 9.12895 23.7265 9.30419L12.3721 21.6047C12.1848 21.8076 11.8685 21.8203 11.6656 21.633C11.6591 21.627 7.86486 17.5174 0.282992 9.30419C0.121226 9.12895 0.10575 8.86385 0.246026 8.67097L4.06886 3.41457C4.25704 3.15583 4.55766 3.00275 4.87759 3.00275ZM5.38682 5.00275L2.58738 8.85198L12.0047 19.0541L21.4221 8.85198L18.6226 5.00275H5.38682Z">
+        </path>
+      </svg>
+    </article>
+
+    <!-- role tablist + role tab + role tabpanel -->
+    <article>
+      <h2 class="article-title"><code>role tablist</code> + <code>role tab</code> + <code>role tabpanel</code>
+      </h2>
+
+      <p class="primary-paragraph">
+        <code>role='tablist'</code> se utiliza para indicar que un contenedor (como un div o un nav) contiene un
+        conjunto de
+        elementos que actúan como pestañas (o tabs).
+      </p>
+      <p class="primary-paragraph">
+        <code>role='tab'</code> se asigna a los elementos de una interfaz de pestañas, que generalmente se representan
+        como botones o enlaces.
+      </p>
+      <p class="primary-paragraph">
+        <code>role='tabpanel'</code> se asigna a un contenedor de contenido que está asociado a una pestaña específica.
+        Este contenido generalmente está oculto cuando la pestaña no está seleccionada y se muestra cuando la pestaña
+        correspondiente es activada.
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, toca cada botón o prueba hacer foco con 'Tab', y escucha cómo los diferentes lectores de
+        pantalla anuncian el contenido:
+      </p>
+
+      <!-- Contenedor de pestañas -->
+      <div role="tablist" class="tabs">
+        <button role="tab" class="tab" aria-selected="true" aria-controls="content1">Pestaña 1</button>
+        <button role="tab" class="tab" aria-selected="false" aria-controls="content2">Pestaña 2</button>
+      </div>
+
+      <!-- Contenido de cada pestaña -->
+      <div id="content1" role="tabpanel" class="tab-content" aria-hidden="false">Contenido de Pestaña 1</div>
+      <div id="content2" role="tabpanel" class="tab-content" aria-hidden="true">Contenido de Pestaña 2</div>
+
+      <div class="screen-readers-info-container">
+        <p>
+          <b>💬 NVDA</b>: Cuando el botón recibe foco, anuncia <q>Seleccionado</q>.
+        </p>
+        <p>
+          <b>💬 Narrador de Windows</b>: Cuando el botón recibe foco, anuncia <q>Seleccionado</q>.
+        </p>
+        <p>
+          <b>💬 Screen Reader</b>: Cuando el botón recibe foco, anuncia <q>Seleccionado</q>.
+        </p>
+        <p>
+          <b>💬 TalkBack</b>: Cuando el botón se toca, anuncia <q>Seleccionado</q>.
+        </p>
+      </div>
+    </article>
+
+    <!-- role alert -->
+    <article>
+      <h2 class="article-title"><code>role alert</code></h2>
+
+      <p class="primary-paragraph">
+        <code>role='alert'</code> se utiliza para marcar elementos que contienen mensajes importantes o urgentes que
+        necesitan ser anunciados de inmediato a los usuarios de lectores de pantalla.
+        <span class="note-paragraph">
+          NOTA: La alerta será anunciada solo una vez.
+        </span>
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, presiona el botón o prueba hacer foco con 'Tab' y luego presiona 'Enter'. Escucha cómo los
+        diferentes lectores de pantalla anuncian el contenido:
+      </p>
+
+      <form class="form">
+        <div>
+          <label for="input6">Contraseña</label>
+          <input type="password" id="input6" autocomplete="current-password">
+          <br>
+          <br>
+          <button type="submit" id="role-alert-button">Ingresar</button>
+        </div>
+
+        <p class="password-alert" id="password-alert" role="alert">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="warning-icon" aria-hidden="true">
+            <path
+              d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 15H13V17H11V15ZM11 7H13V13H11V7Z">
+            </path>
+          </svg>
+          La contraseña es incorrecta
+        </p>
+      </form>
+
+      <div class="screen-readers-info-container">
+        <p>
+          <b>💬 NVDA</b>: Anuncia <q>Alerta, la contraseña es incorrecta</q>.
+        </p>
+        <p>
+          <b>💬 Narrador de Windows</b>: Anuncia <q>Alerta, la contraseña es incorrecta</q>.
+        </p>
+        <p>
+          <b>💬 Screen Reader</b>: Anuncia <q>La contraseña es incorrecta,
+            alerta</q>.
+        </p>
+        <p>
+          <b>💬 TalkBack</b>: Anuncia <q>La contraseña es incorrecta</q>.
+        </p>
+      </div>
+    </article>
+
+    <!-- role menu y role menuitem -->
+    <article>
+      <h2 class="article-title"><code>role menu</code> y <code>role menuitem</code></h2>
+
+      <p class="primary-paragraph">
+        Si tenemos un menú interactivo, es importante utilizar estos roles juntos para garantizar una estructura
+        accesible: <code>role='menu'</code> se utiliza para el contenedor del menú, y <code>role='menuitem'</code> se
+        utiliza para cada opción dentro del menú.
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, presiona el botón, o prueba hacer foco con 'Tab' y luego presiona 'Enter'. Escucha cómo los
+        diferentes lectores de pantalla anuncian el contenido:
+      </p>
+
+      <button id="role-menu-button">
+        Idioma
+      </button>
+      <div id="menu3" class="menu role-menu" role="menu" hidden>
+        <button role="menuitem">Español</button>
+        <button role="menuitem">Inglés</button>
+      </div>
+
+      <div class="screen-readers-info-container">
+        <p>
+          <b>💬 NVDA</b>: Una vez presionado el botón anuncia <q>Menú</q>. Y al movernos
+          por las opciones del menú anuncia <q>Español 1 de 2</q>, <q>Inglés 2 de 2</q>
+        </p>
+        <p>
+          <b>💬 Narrador de Windows</b>: Una vez presionado el botón anuncia <q>Menú</q>.
+          Y al movernos por las opciones del menú anuncia <q>Español, elemento de menú, 1 de 2</q>, <q>Inglés,
+            elemento
+            de
+            menú, 2 de 2</q>
+        </p>
+        <p>
+          <b>💬 Screen Reader</b>: Una vez presionado el botón anuncia <q>Menú</q>. Y al movernos
+          movernos por las opciones del menú anuncia <q>Español, elemento de menú, 1 de 2</q>, <q>Inglés, elemento de
+            menú, 2 de 2</q>
+        </p>
+        <p>
+          <b>💬 TalkBack</b>: Al movernos por las opciones del menú anuncia <q>Español, elemento
+            del menú</q>, <q>Inglés, elemento del menú</q>.
+        </p>
+      </div>
+    </article>
+
+    <!-- role dialog -->
+    <article>
+      <h2 class="article-title"><code>role dialog</code></h2>
+
+      <p class="primary-paragraph">
+        <code>role='dialog'</code> se utiliza para avisar al lector de pantalla que una sección de la página es un
+        diálogo modal o ventana emergente.
+        <span class="note-paragraph">NOTA: Para que el lector anuncie algo, es necesario moverse a algún elemento dentro
+          del modal o programar un enfoque.
+        </span>
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, presiona el botón.
+      </p>
+
+      <button class="open-modal-button">
+        Agregar producto al carrito
+      </button>
+      <div class="modal-overlay"></div>
+      <div class="modal" role="dialog" aria-modal="true">
+        <h2 class="modal-title">Agregar producto al carrito</h2>
+        <p class="modal-paragraph">¿Estás seguro de que deseas agregar el producto al carrito?</p>
+        <div class="buttons-container">
+          <button class="cancel-modal-button secondary">No, Cancelar</button>
+          <button class="confirm-modal-button">Sí, Agregar</button>
+        </div>
+      </div>
+
+      <div class="screen-readers-info-container">
+        <p>
+          <b>💬 NVDA</b>: Anuncia <q>Diálogo</q>.
+        </p>
+        <p>
+          <b>💬 Narrador de Windows</b>: Menciona el elemento enfocado + el título + el párrafo.
+        </p>
+        <p>
+          <b>💬 Screen Reader</b>: Anuncia <q>Diálogo introducido. Diálogo</q>.
+        </p>
+        <p>
+          <b>💬 TalkBack</b>: Anuncia <q>Se abrió el diálogo</q>.
+        </p>
+      </div>
+    </article>
+
+    <!-- role alertdialog -->
+    <article>
+      <h2 class="article-title"><code>role alertdialog</code></h2>
+
+      <p class="primary-paragraph">
+        <code>role='alertdialog'</code> se usa para confirmaciones críticas, errores graves y alertas de seguridad.
+        <span class="note-paragraph">NOTA: Para que el lector anuncie algo, es necesario moverse a algún elemento dentro
+          del modal o programar un enfoque.
+        </span>
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, presiona el botón.
+      </p>
+
+      <button class="open-modal-button delete">
+        Eliminar producto
+      </button>
+      <div class="modal-overlay"></div>
+      <div class="modal" role="alertdialog" aria-modal="true">
+        <h2>Eliminar producto</h2>
+        <p>¿Estás seguro de que deseas eliminar el producto?</p>
+        <div class="buttons-container">
+          <button class="cancel-modal-button secondary cancel">No, Cancelar</button>
+          <button class="confirm-modal-button delete">Sí, Eliminar</button>
+        </div>
+      </div>
+
+      <div class="screen-readers-info-container">
+        <p>
+          <b>💬 NVDA</b>: Anuncia <q>Diálogo</q>, seguido del
+          contenido de una etiqueta p si la hay, seguido del elemento que hayamos enfocado.
+        </p>
+        <p>
+          <b>💬 Narrador de Windows</b>: Anuncia <q>Alerta</q>,
+          seguido del contenido de una etiqueta p si la hay, seguido de elementos interactivos si los hay.
+        </p>
+        <p>
+          <b>💬 Screen Reader</b>: Anuncia <q>Diálogo introducido</q>.
+        </p>
+        <p>
+          <b>💬 TalkBack</b>: Anuncia el elemento enfocado.
+        </p>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="footer">
+    <p>Desarrollado por Luciano Treachi</p>
+  </footer>
+</body>
+
+</html>

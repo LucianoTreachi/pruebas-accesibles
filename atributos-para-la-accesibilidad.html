@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Basic -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atributos HTML para mejorar la accesibilidad web</title>
+  <meta name="description"
+    content="Conoce los atributos HTML más importantes para optimizar la accesibilidad web y garantizar una experiencia inclusiva para todos.">
+  <link rel="canonical" href="https://pruebasaccesibles.vercel.app/atributos-para-la-accesibilidad">
+  <!-- Styles -->
+  <link rel="preload" as="style" href="/css/atributos-styles.css">
+  <link rel="stylesheet" href="/css/atributos-styles.css">
+  <!-- Scripts -->
+  <script src="/js/atributos-script.js" defer></script>
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon/favicon.png" type="image/png">
+  <!-- Facebook -->
+  <meta property="og:url" content="https://pruebasaccesibles.vercel.app/atributos-para-la-accesibilidad">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Atributos HTML para mejorar la accesibilidad web">
+  <meta property="og:description"
+    content="Conoce los atributos HTML más importantes para optimizar la accesibilidad web y garantizar una experiencia inclusiva para todos.">
+  <meta property="og:image" content="https://i.postimg.cc/yx46Cd7k/banner.jpg">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://pruebasaccesibles.vercel.app/atributos-para-la-accesibilidad">
+  <meta name="twitter:title" content="Atributos HTML para mejorar la accesibilidad web">
+  <meta name="twitter:description"
+    content="Conoce los atributos HTML más importantes para optimizar la accesibilidad web y garantizar una experiencia inclusiva para todos.">
+  <meta name="twitter:image" content="https://i.postimg.cc/yx46Cd7k/banner.jpg">
+</head>
+
+<body>
+  <header class="header">
+    <a href="javascript:window.history.back()" class="page-back-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z">
+        </path>
+      </svg>
+      Volver
+    </a>
+    <h1 class="title">Atributos HTML para Mejorar la Accesibilidad Web</h1>
+  </header>
+
+  <main class="main">
+
+    <p class="secondary-paragraph">
+      Algunos atributos HTML son esenciales para mejorar la accesibilidad web, especialmente para usuarios de lectores
+      de pantalla. En esta sección, realizaremos pruebas para demostrar cómo estos atributos pueden optimizar la
+      experiencia de navegación.
+    </p>
+
+    <p class="warning-paragraph">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="warning-icon" aria-hidden="true">
+        <path
+          d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 15H13V17H11V15ZM11 7H13V13H11V7Z">
+        </path>
+      </svg>
+      <b style="color: #f8d76c;">Atención:</b> Para realizar las pruebas, asegúrate de tener un lector de pantalla
+      activo, como NVDA, Narrador de Windows, Screen Reader, TalkBack o VoiceOver.
+    </p>
+
+    <!-- alt -->
+    <article>
+      <h2 class="article-title"><code>alt</code></h2>
+
+      <p class="primary-paragraph">
+        El atributo <code>alt</code> se utiliza para proporcionar una descripción detallada sobre una imagen o gráfico.
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, si estás utilizando TalkBack prueba tocar la imagen. Si estás utilizando alguno de los otros
+        lectores mencionados, prueba llegar a la imagen con las flechas hacia arriba o hacia abajo del teclado.
+      </p>
+
+      <div class="img-container">
+        <img src="/assets//images/avatar.jpg" alt="Avatar de Luciano Treachi" width="200" height="200">
+      </div>
+
+      <div class="screen-readers-info-container">
+        <p>
+          <b>💬 NVDA</b>: Anuncia <q>Gráfico, Avatar de Luciano Treachi</q>.
+        </p>
+        <p>
+          <b>💬 Narrador de Windows</b>: Anuncia <q>Avatar de Luciano Treachi</q>.
+        </p>
+        <p>
+          <b>💬 Screen Reader</b>: Anuncia <q>Avatar de Luciano Treachi</q>.
+        </p>
+        <p>
+          <b>💬 TalkBack</b>: Anuncia <q>Avatar de Luciano Treachi, Gráfico</q>
+        </p>
+      </div>
+    </article>
+
+    <!-- alt vacío -->
+    <article>
+      <h2 class="article-title"><code>alt vacío</code></h2>
+
+      <p class="primary-paragraph">
+        El atributo alt vacío (alt="") se utiliza para indicar que una imagen es decorativa y que
+        no debe ser anunciada por el lector de pantalla.
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, si estás utilizando TalkBack prueba tocar la imagen. Si estás utilizando alguno de los otros
+        lectores mencionados, prueba llegar a la imagen con las flechas hacia arriba o hacia abajo del teclado.
+      </p>
+
+      <div class="img-container">
+        <img src="/assets/images/green-leaf.png" alt="" width="200" height="200">
+      </div>
+
+      <div class="screen-readers-info-container">
+        <p>
+          <b>💬 NVDA</b>: No anuncia la imagen.
+        </p>
+        <p>
+          <b>💬 Narrador de Windows</b>: No anuncia la imagen.
+        </p>
+        <p>
+          <b>💬 Screen Reader</b>: No anuncia la imagen.
+        </p>
+        <p>
+          <b>💬 TalkBack</b>: No anuncia la imagen.
+        </p>
+      </div>
+    </article>
+
+    <!-- aria-label -->
+    <article>
+      <h2 class="article-title"><code>aria-label</code></h2>
+
+      <p class="primary-paragraph">
+        El atributo <code>aria-label</code> se utiliza para incluir una descripción que solo será anunciada por un
+        lector de pantalla. Es muy útil para etiquetar botones o enlaces de iconos/imágenes.
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, toca el botón o prueba hacer foco con 'Tab', y escucha cómo los diferentes lectores de pantalla
+        anuncian el contenido:
+      </p>
+
+      <button aria-label="Dejar un me gusta" class="heart-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12.001 4.52853C14.35 2.42 17.98 2.49 20.2426 4.75736C22.5053 7.02472 22.583 10.637 20.4786 12.993L11.9999 21.485L3.52138 12.993C1.41705 10.637 1.49571 7.01901 3.75736 4.75736C6.02157 2.49315 9.64519 2.41687 12.001 4.52853Z">
+          </path>
+        </svg>
+      </button>
+
+      <div class="screen-readers-info-container">
+        <p>
+          <b>💬 NVDA</b>: Cuando el botón recibe foco, anuncia el contenido de aria-label: <q>Dejar
+            un me gusta, botón</q>.
+        </p>
+        <p>
+          <b>💬 Narrador de Windows</b>: Cuando el botón recibe foco, anuncia el contenido de
+          aria-label: <q>Dejar un me gusta, botón</q>.
+        </p>
+        <p>
+          <b>💬 Screen Reader</b>: Cuando el botón recibe foco, anuncia el contenido de aria-label:
+          <q>Dejar un me gusta, botón</q>.
+        </p>
+        <p>
+          <b>💬 TalkBack</b>: Cuando el botón se toca, anuncia el contenido de aria-label:
+          <q>Dejar un me gusta, botón</q>
+        </p>
+      </div>
+    </article>
+
+    <!-- aria-labelledby -->
+    <article>
+      <h2 class="article-title"><code>aria-labelledby</code></h2>
+
+      <p class="primary-paragraph">
+        El atributo <code>aria-labelledby</code> se utiliza para proporcionar un nombre accesible a un elemento,
+        utilizando el contenido de uno o más elementos del DOM.
+        <span class="note-paragraph">NOTA: Este atributo anula a label, aria-label y al
+          texto interno del elemento si está presente.
+        </span>
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, prueba posicionarte en el campo o hacer foco con 'Tab', y escucha cómo los diferentes lectores
+        de pantalla anuncian el contenido:
+      </p>
+
+      <label for="input2">Nombre</label>
+      <input type="text" id="input2" aria-labelledby="desc1">
+      <br>
+      <br>
+      <p id="desc1"><b style="color: #f8d76c;">Todos los campos son obligatorios</b></p>
+
+      <div class="screen-readers-info-container">
+        <p>
+          <b>💬 NVDA</b>: Cuando el input recibe foco, anuncia el contenido al cual apunta
+          aria-labelledby: <q>Todos los campos son obligatorios</q>.
+        </p>
+        <p>
+          <b>💬 Narrador de Windows</b>: Cuando el input recibe foco, anuncia el contenido al
+          cual apunta aria-labelledby: <q>Todos los campos son obligatorios</q>.
+        </p>
+        <p>
+          <b>💬 Screen Reader</b>: Cuando el input recibe foco, anuncia el contenido al cual
+          apunta aria-labelledby: <q>Todos los campos son obligatorios</q>.
+        </p>
+        <p>
+          <b>💬 TalkBack</b>: Cuando el input se toca, anuncia el contenido al cual apunta
+          aria-labelledby: <q>Todos los campos son obligatorios</q>.
+        </p>
+      </div>
+    </article>
+
+    <!-- aria-describedby -->
+    <article>
+      <h2 class="article-title"><code>aria-describedby</code></h2>
+
+      <p class="primary-paragraph">
+        El atributo <code>aria-describedby</code> es similar a aria-labelledby, pero se puede usar en conjunto con label
+        o
+        aria-label.
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, prueba posicionarte en el campo o hacer foco con 'Tab', y escucha cómo los diferentes lectores
+        de pantalla anuncian el contenido:
+      </p>
+
+      <label for="input4">Nombre</label>
+      <input type="text" id="input4" aria-describedby="desc2">
+      <br>
+      <br>
+      <p id="desc2"><b style="color: #f8d76c;">Todos los campos son obligatorios</b></p>
+
+      <div class="screen-readers-info-container">
+        <p>
+          <b>💬 NVDA</b>: Cuando el input recibe foco, anuncia el contenido de label y luego el contenido de
+          aria-describedby.
+        </p>
+        <p>
+          <b>💬 Narrador de Windows</b>: Cuando el input recibe foco, anuncia el contenido de label y omite
+          aria-describedby.
+        </p>
+        <p>
+          <b>💬 Screen Reader</b>: Cuando el input recibe foco, anuncia el contenido de label y omite aria-describedby.
+        </p>
+        <p>
+          <b>💬 TalkBack anunciará</b>: Cuando el input se toca, anuncia el contenido de label y luego el contenido de
+          aria-describedby.
+        </p>
+      </div>
+    </article>
+
+    <!-- aria-expanded y aria-controls -->
+    <article>
+      <h2 class="article-title"><code>aria-expanded</code> y <code>aria-controls</code></h2>
+
+      <p class="primary-paragraph">
+        El atributo <code>aria-expanded</code> se utiliza para indicar si un elemento (como un menú o acordeón) está
+        expandido (true) o colapsado (false).
+      </p>
+      <p class="primary-paragraph">
+        El atributo <code>aria-controls</code> asegura que el lector de pantalla sepa exactamente qué controla cada
+        botón. Es una buena práctica incluirlo junto a aria-expanded para garantizar mayor semántica y claridad.
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, toca el botón o prueba hacer foco con 'Tab', y escucha cómo los diferentes lectores
+        de pantalla anuncian el contenido:
+      </p>
+
+      <button id="button-aria-expanded" aria-expanded="false" aria-controls="menu-aria-expanded">
+        Idioma
+      </button>
+      <div id="menu-aria-expanded" class="menu" hidden>
+        <ul>
+          <li>Español</li>
+          <li>Inglés</li>
+        </ul>
+      </div>
+
+      <div class="screen-readers-info-container">
+        <p>
+          <b>💬 NVDA</b>: Cuando el botón recibe foco, anuncia <q>Idioma, botón contraído</q>.
+        </p>
+        <p>
+          <b>💬 Narrador de Windows</b>: Cuando el botón recibe foco, anuncia <q>Idioma, botón
+            contraído</q>.
+        </p>
+        <p>
+          <b>💬 Screen Reader</b>: Cuando el botón recibe foco, anuncia <q>Idioma,
+            botón contraído</q>.
+        </p>
+        <p>
+          <b>💬 TalkBack</b>: Cuando el botón se toca, anuncia <q>Contraída, Idioma, Botón</q>.
+        </p>
+      </div>
+    </article>
+
+    <!-- aria-haspopup -->
+    <article>
+      <h2 class="article-title"><code>aria-haspopup</code></h2>
+
+      <p class="primary-paragraph">
+        El atributo <code>aria-haspopup</code> indica que un cierto elemento tiene un submenú, un diálogo, o una
+        lista de opciones que se puede desplegar. Este atributo puede recibir el valor de 'true',
+        'menu', 'dialog', 'grid', 'listbox'.
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, toca el botón o prueba hacer foco con 'Tab', y escucha cómo los diferentes lectores
+        de pantalla anuncian el contenido:
+      </p>
+
+      <button id="button-aria-haspopup" aria-haspopup="true">
+        Idioma
+      </button>
+      <div id="menu-aria-haspopup" class="menu" hidden>
+        <ul>
+          <li>Español</li>
+          <li>Inglés</li>
+        </ul>
+      </div>
+
+      <div class="screen-readers-info-container">
+        <p>
+          <b>💬 NVDA</b>: Cuando el botón recibe foco, anuncia <q>Idioma, botón de menú submenú</q>.
+        </p>
+        <p>
+          <b>💬 Narrador de Windows</b>: Cuando el botón recibe foco, anuncia <q>Idioma, elemento de
+            menú</q>.
+        </p>
+        <p>
+          <b>💬 Screen Reader</b>: Cuando el botón recibe foco, anuncia <q>Idioma, botón con componente emergente</q>.
+        </p>
+        <p>
+          <b>💬 TalkBack</b>: Cuando el botón se toca, anuncia <q>Idioma, botón de menú emergente</q>.
+        </p>
+      </div>
+    </article>
+
+    <!-- aria-hidden -->
+    <article>
+      <h2 class="article-title"><code>aria-hidden</code></h2>
+
+      <p class="primary-paragraph">
+        El atributo <code>aria-hidden</code> y el valor 'true', asegura que el contenido no sea anunciado por el lector
+        de pantalla. ¿Cuándo utilizarlo? En SVG decorativos (íconos, formas, separadores).
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, el siguiente icono SVG tiene el atributo aria-hidden con el valor 'true', por lo tanto no
+        será anunciado por el lector de pantalla.
+      </p>
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="arrow-right-icon" aria-hidden="true">
+        <path
+          d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+        </path>
+      </svg>
+    </article>
+
+    <!-- aria-busy -->
+    <article>
+      <h2 class="article-title"><code>aria-busy</code></h2>
+
+      <p class="primary-paragraph">
+        El atributo <code>aria-busy</code> se usa en situaciones donde un elemento o una sección de la página está en un
+        estado de 'carga' o 'ocupado'. Esto permite que las tecnologías de asistencia informen al usuario que algo se
+        está cargando o procesando y que debe esperar.
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, presiona el botón, o prueba hacer foco con 'Tab' y luego presiona 'Enter'. Escucha cómo los
+        diferentes lectores de pantalla anuncian el contenido:
+      </p>
+
+      <button id="button-aria-busy" aria-busy="false">Ingresar</button>
+
+      <div class="screen-readers-info-container">
+        <p>
+          <b>💬 NVDA</b>: Cuando el botón es presionado, anuncia <q>Procesando</q>.
+        </p>
+        <p>
+          <b>💬 Narrador de Windows</b>: Cuando el botón es presionado, no anuncia nada.
+        </p>
+        <p>
+          <b>💬 Screen Reader</b>: Cuando el botón es presionado, anuncia <q>Cargando...</q>
+        </p>
+        <p>
+          <b>💬 TalkBack</b>: Cuando el botón es presionado, no anuncia nada.
+        </p>
+      </div>
+    </article>
+
+    <!-- aria-atomic -->
+    <article>
+      <h2 class="article-title"><code>aria-atomic</code></h2>
+
+      <p class="primary-paragraph">
+        El atributo <code>aria-atomic</code> se usa para controlar cómo los lectores de pantalla anuncian las
+        actualizaciones en el contenido de un elemento cuando este cambia. Si el valor está en 'true', el lector lee
+        toda la frase. Si está en 'false', el lector solo lee el contenido que cambia.
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, presiona el botón, o prueba hacer foco con 'Tab' y luego presiona 'Enter'. Escucha cómo los
+        diferentes lectores de pantalla anuncian el contenido:
+      </p>
+
+      <div id="status-container" aria-live="polite" aria-atomic="true">
+        <p>Estado de la tarea: <span class="task-status" id="task-status">Pendiente</span></p>
+      </div>
+      <br>
+      <button id="toggle-status">Completar la tarea</button>
+
+      <div class="screen-readers-info-container">
+        <p>
+          <b>💬 NVDA</b>: Cuando el botón es presionado, anuncia <q>Estado de la tarea: completado</q>.
+        </p>
+        <p>
+          <b>💬 Narrador de Windows</b>: Cuando el botón es presionado, anuncia <q>Estado de la tarea: completado</q>.
+        </p>
+        <p>
+          <b>💬 Screen Reader</b>: Cuando el botón es presionado, anuncia <q>Estado de la tarea: completado</q>.
+        </p>
+        <p>
+          <b>💬 TalkBack</b>: Cuando el botón es presionado, anuncia <q>Completado</q>.
+        </p>
+      </div>
+    </article>
+
+    <!-- aria-live -->
+    <article>
+      <h2 class="article-title"><code>aria-live</code></h2>
+
+      <p class="primary-paragraph">
+        El atributo <code>aria-live</code> indica a los lectores de pantalla que deben prestar atención a las
+        actualizaciones de contenido en un área específica de la página. Es útil cuando hay contenido dinámico que
+        cambia, como notificaciones o actualizaciones en tiempo real.
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, presiona el botón, o prueba hacer foco con 'Tab' y luego presiona 'Enter'. Escucha cómo los
+        diferentes lectores de pantalla anuncian el contenido:
+      </p>
+
+      <button id="aria-live-button">Actualizar</button>
+      <div id="liveRegion" class="live-region" aria-live="polite"></div>
+
+      <div class="screen-readers-info-container">
+        <p>
+          <b>💬 NVDA</b>: Cuando el botón es presionado, anuncia todo lo que esté dentro de aria-live.
+        </p>
+        <p>
+          <b>💬 Narrador de Windows</b>: Cuando el botón es presionado, anuncia todo lo que esté dentro de aria-live.
+        </p>
+        <p>
+          <b>💬 Screen Reader</b>: Cuando el botón es presionado, anuncia todo lo que esté dentro de aria-live.
+        </p>
+        <p>
+          <b>💬 TalkBack</b>: Cuando el botón es presionado, anuncia todo lo que esté dentro de aria-live.
+        </p>
+      </div>
+    </article>
+
+    <!-- aria-current -->
+    <article>
+      <h2 class="article-title"><code>aria-current</code></h2>
+
+      <p class="primary-paragraph">
+        El atributo <code>aria-current</code> se utiliza para indicar que un elemento en una lista o en una navegación
+        es el 'actual' o 'seleccionado'.
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, toca cada enlace o prueba hacer foco con 'Tab', y escucha cómo los diferentes lectores
+        de pantalla anuncian el contenido:
+      </p>
+
+      <nav class="navigation">
+        <ul>
+          <li><a href="#home" aria-current="page">Inicio</a></li>
+          <li><a href="#about">Acerca de</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="screen-readers-info-container">
+        <p>
+          <b>💬 NVDA</b>: Cuando cada link recibe foco y está seleccionado, anuncia <q>Página actual</q>.
+        </p>
+        <p>
+          <b>💬 Narrador de Windows</b>: No anuncia nada.
+        </p>
+        <p>
+          <b>💬 Screen Reader</b>: No anuncia nada.
+        </p>
+        <p>
+          <b>💬 TalkBack</b>: Cuando cada link recibe foco y está seleccionado, anuncia <q>Página actual</q>.
+        </p>
+      </div>
+    </article>
+
+    <!-- aria-pressed -->
+    <article>
+      <h2 class="article-title"><code>aria-pressed</code></h2>
+
+      <p class="primary-paragraph">
+        El atributo <code>aria-pressed</code> se utiliza para indicar el estado de un botón que puede alternar entre
+        presionado y no presionado, como en un botón de 'me gusta' o en un botón de 'favorito'.
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, toca el botón o prueba hacer foco con 'Tab', y escucha cómo los diferentes lectores
+        de pantalla anuncian el contenido:
+      </p>
+
+      <button id="favorite-button" class="favorite-button" aria-pressed="false">
+        Marcar como favorito
+      </button>
+
+      <div class="screen-readers-info-container">
+        <p>
+          <b>💬 NVDA</b>: Cuando el botón recibe foco, anuncia <q>Botón conmutador sin pulsar</q>, y
+          una vez presionado <q>Pulsado</q>.
+        </p>
+        <p>
+          <b>💬 Narrador de Windows</b>: Cuando el botón recibe foco, anuncia <q>Botón
+            desactivado</q>, y una vez presionado <q>Botón activado</q>.
+        </p>
+        <p>
+          <b>💬 Screen Reader</b>: Cuando el botón recibe foco, anuncia <q>Botón sin pulsar</q>, y una
+          vez presionado <q>Botón pulsado</q>.
+        </p>
+        <p>
+          <b>💬 TalkBack</b>: Cuando el botón se toca, anuncia <q>Desactivado, botón de
+            activación</q>, y una vez presionado <q>Activado</q>.
+        </p>
+      </div>
+    </article>
+
+    <!-- tabindex 0 -->
+    <article>
+      <h2 class="article-title"><code>tabindex 0</code></h2>
+
+      <p class="primary-paragraph">
+        Los elementos interactivos como 'button', 'a', 'input', 'select', 'textarea',
+        tienen implícito el atributo <code>tabindex='0'</code>, es decir que son enfocables con la tecla 'Tab'. Si
+        quisiéramos agregar un elemento no interactivo al flujo de tabulación, podemos usar tabindex='0' en dicho
+        elemento.
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, prueba enfocar cada elemento con 'Tab'. El botón y el input son enfocables por defecto, y además
+        ahora el párrafo será enfocable ya que tiene el atributo tabindex='0.'
+      </p>
+
+      <button>
+        Botón enfocable por defecto
+      </button>
+      <br>
+      <br>
+      <input type="text" id="input" class="tabindex-cero-input" aria-label="Input enfocable por defecto">
+      <br>
+      <br>
+      <p tabindex="0">Párrafo enfocable con tabindex 0</p>
+
+    </article>
+
+    <!-- tabindex -1 -->
+    <article>
+      <h2 class="article-title"><code>tabindex -1</code></h2>
+
+      <p class="primary-paragraph">
+        El atributo <code>tabindex='-1'</code> permite dirigir programáticamente el foco a elementos que no son
+        naturalmente interactivos, como un párrafo, un contenedor de mensajes o una sección. Para realizar un enfoque
+        programático se necesita algo de código javaScript.
+      </p>
+      <p class="secondary-paragraph">
+        A continuación, presiona el botón o prueba hacer foco con 'Tab' y luego presiona 'Enter'. Una vez presionado el
+        botón, se enfocará el párrafo de abajo.
+      </p>
+
+      <button id="focus-button">
+        Enfocar párrafo
+      </button>
+      <br>
+      <br>
+      <p id="tabindex-paragraph"><b style="color: #f8d76c;">Párrafo que será enfocado una vez presionado 'Enter'.</b>
+      </p>
+
+      <div class="screen-readers-info-container">
+        <p>
+          <b>💬 NVDA</b>: Cuando el botón es presionado, anuncia todo el contenido que tenga tabindex -1.
+        </p>
+        <p>
+          <b>💬 Narrador de Windows</b>: Cuando el botón es presionado, anuncia todo el contenido que tenga tabindex -1.
+        </p>
+        <p>
+          <b>💬 Screen Reader</b>: Cuando el botón es presionado, anuncia todo el contenido que tenga tabindex -1.
+        </p>
+        <p>
+          <b>💬 TalkBack</b>: Cuando el botón es presionado, anuncia todo el contenido que tenga tabindex -1.
+        </p>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="footer">
+    <p>Desarrollado por Luciano Treachi</p>
+  </footer>
+</body>
+
+</html>
