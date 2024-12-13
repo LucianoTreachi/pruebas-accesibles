@@ -1,6 +1,6 @@
 # Pruebas Accesibles
 
-**Pruebas Accesibles** es un sitio web diseñado para evaluar cómo distintos lectores de pantalla anuncian la información, cuando se incluyen etiquetas, atributos y roles específicos que mejoran al accesibilidad web.
+**Pruebas Accesibles** es un sitio web diseñado para evaluar cómo distintos lectores de pantalla anuncian la información, cuando se incluyen etiquetas, atributos y roles específicos que mejoran la accesibilidad web.
 
 > [!NOTE]
 > Un lector de pantalla es un programa que lee en voz alta el contenido de la pantalla para facilitar el acceso a personas con discapacidad visual.
