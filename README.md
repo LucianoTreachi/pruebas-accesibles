@@ -10,8 +10,11 @@
 Por el momento, he realizado pruebas en el sistema operativo Windows y Android, con:
 
 - **NVDA:** instalable para Windows, gratuito. Se puede descargar desde aquí: [Descarga de NVDA](https://nvda.es/descargas/descarga-de-nvda/)
+
 - **Screen Reader** Extensión de Google Chrome. Se puede descargar desde aquí: [Descarga de Screen Reader](https://chromewebstore.google.com/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn)
+
 - **Narrador de Windows:** Nativo de Windows. Se activa/desactiva con las teclas `Ctrl + Tecla Windows + Enter`
+
 - **TalkBack:** Nativo de Android. Se activa desde `Configuración > Accesibilidad > TalkBack`
 
 > [!WARNING]
@@ -20,7 +23,7 @@ Por el momento, he realizado pruebas en el sistema operativo Windows y Android, 
 > [!IMPORTANT]
 > Este repositorio recibirá soporte a medida que se vayan realizando más pruebas.
 
-## Explora la página
+## Explora el sitio web
 
 Accede aquí → [Pruebas Accesibles](https://pruebasaccesibles.vercel.app/)
 
