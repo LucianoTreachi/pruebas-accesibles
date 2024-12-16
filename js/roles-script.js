@@ -1,7 +1,7 @@
 // DOM ELEMENTS
 // ------------
 
-// role tablist + aria-selected
+// role tablist
 const tabs = document.querySelectorAll('[role="tab"]');
 const tabContents = document.querySelectorAll('[role="tabpanel"]');
 
@@ -24,7 +24,7 @@ const cancelModalButton = document.querySelectorAll(".cancel-modal-button");
 const confirmModalButton = document.querySelectorAll(".confirm-modal-button");
 
 
-// role tablist + aria-selected
+// role tablist
 // ----------------------------
 tabs.forEach((tab, index) => {
   function activateTab() {

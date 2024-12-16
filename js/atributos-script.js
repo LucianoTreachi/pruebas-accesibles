@@ -30,9 +30,6 @@ const favoriteButton = document.getElementById('favorite-button');
 const focusButton = document.getElementById("focus-button");
 const tabindexParagraph = document.getElementById("tabindex-paragraph");
 
-// details
-const details = document.querySelectorAll('.details');
-
 
 // aria-expanded y aria-controls 
 // -----------------------------
@@ -106,15 +103,12 @@ ariaLiveButton.addEventListener("click", updateMessage);
 // -----------
 navigationLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
-    // Prevenir el comportamiento predeterminado del enlace (no redirigir)
     event.preventDefault();
 
-    // Primero, eliminar el atributo aria-current de todos los enlaces
     navigationLinks.forEach((link) => {
       link.removeAttribute('aria-current');
     });
 
-    // Luego, asignar aria-current="page" al enlace clickeado
     link.setAttribute('aria-current', 'page');
   })
 });
