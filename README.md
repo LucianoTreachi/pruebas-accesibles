@@ -9,7 +9,7 @@
 
 ## Pruebas realizadas
 
-Por el momento, he realizado pruebas en el sistema operativo Windows y Android, con:
+Por el momento, he realizado pruebas en Windows y Android con los siguientes lectores:
 
 - **NVDA:** instalable para Windows, gratuito. Se puede descargar desde aquí: [Descarga de NVDA](https://nvda.es/descargas/descarga-de-nvda/)
 
