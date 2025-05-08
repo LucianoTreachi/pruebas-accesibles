@@ -55,7 +55,7 @@ button {
   background-color: var(--primary-button-bg-color);
   padding: 1rem 1.2rem;
   font-weight: 600;
-  min-width: 212px;
+  min-width: 14rem;
   cursor: pointer;
 }
 
@@ -270,7 +270,7 @@ b {
   margin-top: 0.4rem;
   padding: 1rem;
   width: max-content;
-  min-width: 212px;
+  min-width: 14rem;
   text-align: center;
   border-radius: 0.5rem;
   background-color: #5e5f61;

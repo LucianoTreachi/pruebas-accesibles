@@ -309,7 +309,7 @@ b {
   transform: translate(-50%, -50%);
   background: var(--modal-bg-color);
   padding: 2rem;
-  width: 400px;
+  width: 25rem;
   max-height: 90%;
   border-radius: 1rem;
   z-index: 1000;
