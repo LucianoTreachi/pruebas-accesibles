@@ -298,7 +298,8 @@ b {
 
 /* RESPONSIVE DESIGN */
 
-@media (max-width: 576px) {
+/* 576px */
+@media (max-width: 36em) {
 
   button,
   input {

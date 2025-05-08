@@ -151,7 +151,8 @@ a:focus {
 
 /* RESPONSIVE DESIGN */
 
-@media (max-width: 576px) {
+/* 576px */
+@media (max-width: 36em) {
 
   .header {
     padding: 4rem 1rem 2.75rem;
